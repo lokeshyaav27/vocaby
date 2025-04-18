@@ -17,6 +17,12 @@ import { ReportsModule } from './modules/reports/reports.module';
       username: 'vocaby_user',
       password: 'm2zkbWOHLU6D0VZjUsJUzKFSk1xcgpCr',
       database: 'vocaby',
+      ssl: true,
+      extra: {
+        ssl: {
+          rejectUnauthorized: false, // required if using self-signed certs
+        },
+      },
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, // Set to false in production
     }),
